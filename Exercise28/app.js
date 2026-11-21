@@ -1,9 +1,8 @@
 
-
 function fetchUser() {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            const success = false; // Simulate success or failure
+            const success = true; // Simulate success or failure
             if (success) {
                 resolve({ id: 1, name: 'John Doe' });
             } else {
@@ -22,8 +21,8 @@ function fetchUser() {
 
 async function getUser() {
     try{
-        const user = await fetchUser();
-        console.log("User:", user);
+        const users = await fetchUser();
+        console.log("Users:", users);
     }catch(error){
         console.error("Error:", error);
     }
